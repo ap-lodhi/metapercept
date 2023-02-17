@@ -5,11 +5,14 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import { Button, CardActionArea, CardActions } from '@mui/material';
-import data from "../db.json"
+import data from "./db.json"
 
 export const Fram = () => {
+    const Data = data.data;
+    console.log(Data)
   return (
    <>
+  
     <div className='cls-heading'>
         <h3>Classes</h3>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita laborum minima saepe reiciendis ratione ex vitae adipisci praesentium facilis cumque volupharum itaque accusamus,</p>
@@ -245,6 +248,14 @@ export const Fram = () => {
     </Card>
    
     </div>
+    {
+    Data.map((el)=>(
+        <p>{el.Name}</p>
+    ))
+   }
+
+
+   <input type="text"  />
    </>
   )
 }
